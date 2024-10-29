@@ -1,4 +1,4 @@
-@tailwind base;
+    @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -14,8 +14,13 @@
   }
 }
 
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  font-family: 'NeueMontreal', sans-serif;
 }

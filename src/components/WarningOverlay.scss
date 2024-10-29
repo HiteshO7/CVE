@@ -1,0 +1,33 @@
+/* src/components/WarningOverlay.scss */
+
+.overlay-div-forth {
+    position: absolute; /* Allow scrolling with the content */
+    top: 0; /* Start at the top of the parent */
+    right: 20px; /* Position on the right side */
+    width: 30px; /* Fixed width */
+    height: auto; /* Adjust height according to content */
+    background-color: transparent; /* Transparent background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    pointer-events: auto;
+    gap: 40px; /* Space between items */
+    z-index: 10; /* Ensure it overlays other content */
+
+    .logo {
+      transform: rotate(-90deg);
+      margin-bottom: 5px;
+    }
+
+    p {
+      transform: rotate(-90deg);
+      font-size: 18px;
+      white-space: nowrap; /* Prevent text from wrapping */
+      color: orangered;
+      text-decoration: line-through;
+      text-decoration-color: white;
+      text-decoration-thickness: 1px;
+    }
+  }
