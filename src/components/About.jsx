@@ -69,7 +69,7 @@ const About = () => {
                 </div>
 
                 <p className="hover">
-                    'Welcome to <span>CVE Tracker!</span> This tool is committed to delivering timely updates on security vulnerabilities, simplifying the process for IT professionals, developers, and security enthusiasts to remain knowledgeable.
+                    &apos;Welcome to <span>CVE Tracker!</span> This tool is committed to delivering timely updates on security vulnerabilities, simplifying the process for IT professionals, developers, and security enthusiasts to remain knowledgeable.
                 </p>
 
                 <section className="about-content">

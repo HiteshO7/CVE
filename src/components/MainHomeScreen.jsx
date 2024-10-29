@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './MainHomeScreen.scss';
 
 const MainHomeScreen = () => {
-  const texts = ["Protect", "Secure"];
+  // Use useMemo to stabilize the texts array
+  const texts = useMemo(() => ["Protect", "Secure"], []);
   const animationDuration = 200; // Duration for each letter animation
   const totalDisplayTime = 3000; // Time for full display before switching
   const [index, setIndex] = useState(0);
@@ -32,7 +33,7 @@ const MainHomeScreen = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [index, isRemoving, currentWordIndex, texts]); // Make sure texts is stable
+  }, [index, isRemoving, currentWordIndex, texts]); // Now texts is stable
 
   return (
     <div className="home-screen-container">
