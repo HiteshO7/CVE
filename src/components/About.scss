@@ -1,5 +1,5 @@
 .main {
-    height: 150vh;
+    height: 250vh;
     position: relative;
     overflow: hidden;
 
@@ -10,7 +10,7 @@
         font-size: 40px;
         line-height: 42px;
         cursor: default;
-        
+
         .About-ous {
             position: absolute;
             margin-top: 70px;
@@ -112,4 +112,72 @@
             }
         }
     }
+
+    .card-div {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        margin-top: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        overflow: hidden; // Ensure overflow is hidden
+
+        .card {
+            margin-top: 20px    ;
+            position: relative; // Set position to relative for video positioning
+            background-color: rgba(0, 0, 0, 0.6); // Black background with transparency
+            border: 1px solid rgba(236, 78, 57,.4); // Border color
+            border-radius: 8px; // Rounded corners
+            padding: 20px;
+            height: 400px; // Default height
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); // Darker shadow for better contrast
+            transition: transform 0.3s; // Add transition for hover effect
+
+            &:hover {
+                transform: translateY(-5px); // Slight lift on hover
+            }
+
+            h3 {
+                color: #ec4e39;
+                margin-bottom: 50px;
+                font-size: 26px;
+                font-weight: 700;
+            }
+
+            // Video styling
+            .card-video {
+                position: absolute; // Position it behind the text
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // Cover the entire card
+                z-index: -1; // Send the video behind the text
+                filter: blur(8px); // Apply blur effect to the video
+            }
+        }
+
+        .first,
+        .second {
+            margin-top: 30px;
+        }
+
+        .tall-card {
+            height: 430px; // Height for the taller card
+            display: flex;
+            flex-direction: column; // Arrange content vertically
+            justify-content: center; // Center content vertically
+            text-align: center; // Center text
+        }
+    }
+
+
+
+
 }

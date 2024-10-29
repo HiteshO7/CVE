@@ -13,10 +13,10 @@ const Page = () => {
     <div>
 
 <WarningOverlay warnings={totalWarnings} />
-    <Header />  
+    <Header />
       <MainHomeScreen />
       <CVEApp />
-      <About/>
+      <About/> 
 
     </div>
   );

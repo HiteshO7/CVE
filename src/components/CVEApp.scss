@@ -6,6 +6,18 @@
     color: black;
     background-color: white ;
 
+    .no-results {
+        display: flex;
+        flex-direction: column; // Optional: stack image and text
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-top: 10rem;
+        opacity: .7;
+
+
+    }
+
     .background-video {
       position: absolute;
       top: 0;

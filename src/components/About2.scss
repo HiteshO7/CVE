@@ -1,0 +1,35 @@
+.about-content {
+    position: absolute;   
+    color: #afa18f;
+    overflow: hidden;
+
+    .hqq, .hq {
+        margin-left: 200px; // Adjust this value as needed
+        font-weight: 700;
+        color: #ec4e39;
+        margin-bottom: 30px;
+    }
+
+    .hqq {
+        margin-left: 1300px; // Adjust this value as needed
+        width: 700px; // Adjust width as necessary
+    }
+
+    .ppp {
+        margin-left: 850px; // Adjust this value as needed
+        width: 35%;
+        margin-bottom: 100px; // Adjust bottom margin as necessary
+        font-size: 28px;
+        text-align: justify;
+        line-height: 35px;
+        color: #afa18f;
+    }
+
+    ol {
+        margin-left: 200px; // Adjust this value as needed
+
+        li {
+            font-size: 28px; // Adjust font size as needed
+        }
+    }
+}

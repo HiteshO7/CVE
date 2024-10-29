@@ -3,6 +3,8 @@ import axios from 'axios';
 import CVECard from './CVECard';
 import ErrorMessage from './ErrorMessage';
 import LoadingScreen from './LoadingScreen';
+
+import Image from 'next/image'; // Import Image from Next.js
 import './CVEApp.scss';
 
 const CVEApp = () => {
@@ -111,7 +113,16 @@ const CVEApp = () => {
                 )}
                 {error && <ErrorMessage message={error} />}
                 {cves.length === 0 && !loading && !error && (
-                    <p className="no-results">No results found.</p>
+                    <div className="no-results">
+                        <Image
+                        src="/no-results.png" // Update with your image path
+                        alt="No results found"
+                        className="no-results-image"
+                        width={150} // Set the desired width
+                        height={150} // Set the desired height
+                    />
+                    No Result Found
+                    </div>
                 )}
                 <div
                     className="results-container"

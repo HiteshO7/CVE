@@ -7,27 +7,29 @@
     width: 30px; /* Fixed width */
     height: auto; /* Adjust height according to content */
     background-color: transparent; /* Transparent background */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    pointer-events: auto;
+    color: white; /* Default text color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items at the start */
+    pointer-events: auto; /* Allow pointer events */
     gap: 40px; /* Space between items */
     z-index: 10; /* Ensure it overlays other content */
 
     .logo {
-      transform: rotate(-90deg);
-      margin-bottom: 5px;
+        transform: rotate(-90deg); /* Rotate logo */
+        margin-bottom: 5px; /* Space below logo */
+        width: 30px; /* Set a specific width */
+        height: auto; /* Maintain aspect ratio */
     }
 
     p {
-      transform: rotate(-90deg);
-      font-size: 18px;
-      white-space: nowrap; /* Prevent text from wrapping */
-      color: orangered;
-      text-decoration: line-through;
-      text-decoration-color: white;
-      text-decoration-thickness: 1px;
+        transform: rotate(-90deg); /* Rotate text */
+        font-size: 18px; /* Font size for text */
+        white-space: nowrap; /* Prevent text from wrapping */
+        color: orangered; /* Text color */
+        text-decoration: line-through; /* Strikethrough text */
+        text-decoration-color: white; /* Color of strikethrough */
+        text-decoration-thickness: 1px; /* Thickness of strikethrough */
     }
-  }
+}

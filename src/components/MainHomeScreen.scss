@@ -1,186 +1,177 @@
 .home-screen-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  height: auto;
-  color: white;
-  overflow: hidden;
-
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  .text-container {
-    margin-top: 200px;
-    height: 200px; // Set a fixed height to prevent shifting
-    display: flex;
-  }
-
-  .text-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left:250px;
-  }
-
-  h1 {
-    font-size: 13rem;
-    margin: 0;
-    z-index: 1;
-  }
-
-  .text-right {
-    justify-content: flex-end;
-    padding-right: 20rem;
-    margin-top: -150px;
-    color: #ec4e39;
-  }
-
-  .text-center {
-    justify-content: center;
-    margin-top: -100px;
-    margin-bottom: 100px;
-  }
-
-  .bottom-text-right {
-    height: auto;
-    width: 35%;
-    margin-left: 55%;
-    p {
-      font-size: 16px;
-      color: rgb(160, 160, 160);
-    }
-  }
-
-  .bottom-text-left {
-    margin-left: 15%;
-    width: 35%;
-    margin-bottom: 150px;
-    p {
-      font-size: 16px;
-      color: rgb(160, 160, 160);
-    }
-  }
-  .overlay-container {
-    position: absolute; // Position absolutely within the home-screen-container
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; // Cover the entire container
-    pointer-events: none; // Allow clicks to pass through if necessary
-  }
-
-  .overlay-div-first{
-    position: absolute; // Position absolutely
-    width: 350px; // Set a width for the overlay divs
-    height: 150px; // Set a height for the overlay divs // Background color with some transparency
-    color: white; // Text color
-    display: flex; // Use flex to center text
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; // Rounded corners
-    pointer-events: auto; // Allow interaction with overlay divs
-    p{
-        font-size: 14px;
-        color: rgb(160, 160, 160);
-        text-align: justify;
-    }
-  }
-
-  .overlay-div-second{
-    position: absolute; // Position absolutely
-    width: 350px; // Set a width for the overlay divs
-    height: 150px; // Set a height for the overlay divs
-    background-color: transparent; // Background color with some transparency
-    color: white; // Text color
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; // Rounded corners
-    pointer-events: auto; // Allow interaction with overlay divs
-
-    h1{
-        font-size: 38px;
-    }
-  }
-
-  .overlay-div-third{
-    display: flex;
-    flex-direction: column;
-    position: absolute; // Position absolutely
-    width: 150px; // Set a width for the overlay divs
-    height: 50px; // Set a height for the overlay divs  // Background color with some transparency
-    color: white; // Text color
-    display: flex; // Use flex to center text
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; // Rounded corners
-    pointer-events: auto; // Allow interaction with overlay divs
-    h1{
-        font-size: 20px;
-    }
-    p{
-        font-size: 13px;
-    }
-
-  }
-  .overlay-div-forth {
-    position: absolute;             /* Position absolutely */
-    width: 30px;                   /* Set a width for the overlay divs */
-    height: 100%;                 /* Set a height for the overlay divs */
-    background-color: transparent;    /* Right border */
-    color: white;                   /* Text color */
-    display: flex;                  /* Use flexbox */
-    flex-direction: column;         /* Arrange items in a column */
-    align-items: center;            /* Center align items horizontally */
-    justify-content: flex-start;    /* Start aligning from the top */
-    pointer-events: auto;
-    gap: 40px;           /* Allow interaction with overlay divs */
-    .logo {
-        transform: rotate(-90deg);      /* Rotate the image */
-        margin-bottom: 5px;             /* Space between image and text */
-    }
-
-    p {
-        transform: rotate(-90deg);
-        font-size: 18px;
-        white-space: nowrap;             /* Prevent text from wrapping */
-        color: orangered;
-        text-decoration: line-through;
-        text-decoration-color: white;
-        text-decoration-thickness: 1px;
-
-                   /* Text color */
-    }
-}
-
-.custom-shape-divider-bottom-1730133946 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1730133946 svg {
     position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 77px;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+    color: white;
+    overflow: hidden;
 
-.custom-shape-divider-bottom-1730133946 .shape-fill {
-    fill: #FFFFFF;
-}
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-}
+    .text-container {
+      margin-top: 200px;
+      height: 200px;
+      display: flex;
+    }
+
+    .text-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 250px;
+    }
+
+    h1 {
+      font-size: 13rem;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .text-right {
+      justify-content: flex-end;
+      padding-right: 20rem;
+      margin-top: -150px;
+      color: #ec4e39;
+    }
+
+    .text-center {
+      justify-content: center;
+      margin-top: -100px;
+      margin-bottom: 100px;
+    }
+
+    .bottom-text-right {
+      height: auto;
+      width: 35%;
+      margin-left: 55%;
+      p {
+        font-size: 16px;
+        color: rgba(120, 120, 120, .8);
+      }
+    }
+
+    .bottom-text-left {
+      margin-left: 15%;
+      width: 35%;
+      margin-bottom: 250px;
+      p {
+        font-size: 16px;
+        color: rgba(120, 120, 120, .8);
+      }
+    }
+
+    .overlay-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .overlay-div-first {
+      position: absolute;
+      width: 350px;
+      height: 150px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 150px;
+      left: 1000px;
+      p {
+        font-size: 46px;
+        color: rgba(120, 120, 120, .8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .number-group {
+          display: inline-flex;
+          align-items: center;
+          font-size: 46px;
+        }
+
+        .animated-number {
+          font-size: 46px;
+          margin-left: 2px;
+        }
+      }
+      .Text {
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 18px;
+      }
+      .span1 {
+        transform: rotate(-30deg);
+        font-size: 80px;
+        margin-top: -30px;
+        margin-left: -240px;
+        color: rgba(120, 120, 120, .8);
+      }
+    }
+
+    .overlay-div-second {
+      position: absolute;
+      width: 350px;
+      height: 150px;
+      color: rgba(120, 120, 120, .8);
+      display: flex;
+      top: 450px;
+      left: 200px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+    }
+
+    .overlay-div-third {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: auto;
+      height: 50px;
+      color: rgba(120, 120, 120, .6);
+      align-items: center;
+      top: 680px;
+      right: 400px;
+      justify-content: center;
+      font-size: 42px;
+      .ow{
+        font-size: 18px;
+        margin-top: -10px;
+      }
+    }
+
+    .custom-shape-divider-bottom-1730133946 {
+      margin-top: -200px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotateY(180deg);
+
+      svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 185px;
+      }
+      .shape-fill {
+        fill: #ffffff;
+      }
+    }
+  }

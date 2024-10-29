@@ -8,6 +8,7 @@ const About = () => {
     const [localMousePos, setLocalMousePos] = useState({ x: 0, y: 0 });
     const mainRef = useRef(null);
     const textRef = useRef(null); // Reference to the text area
+    const videoRefs = useRef([]);
 
     const handleMouseMove = (e) => {
         if (!mainRef.current) return; // Safety check
@@ -32,9 +33,14 @@ const About = () => {
     const size = isOverTextArea ? 200 : 40;
 
     useEffect(() => {
-        console.log('Mouse Position:', localMousePos);
-        console.log('Text Area Position:', textRef.current?.getBoundingClientRect());
-    }, [localMousePos]);
+        const startTimes = [2, 5, 3]; // Start times for each video in seconds
+        videoRefs.current.forEach((videoRef, index) => {
+            if (videoRef) {
+                videoRef.currentTime = startTimes[index]; // Set each video to its start time
+                videoRef.play(); // Start playing the video
+            }
+        });
+    }, []);
 
     return (
         <main
@@ -84,6 +90,42 @@ const About = () => {
                         <li>2. Browse through the list of results to find details about each CVE.</li>
                         <li>3. Click on CVE IDs for more information.</li>
                     </ol>
+                </section>
+
+                <section className="card-div">
+                    <div className="card first">
+                        <video className="card-video" ref={el => videoRefs.current[0] = el} autoPlay loop muted>
+                            <source src="/mainbg.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To empower individuals and organizations by providing real-time information
+                            on the latest vulnerabilities, contributing to a safer digital world.
+                        </p>
+                    </div>
+                    <div className="card tall-card">
+                        <video className="card-video" ref={el => videoRefs.current[1] = el} autoPlay loop muted>
+                            <source src="/mainbg.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>How We Help</h3>
+                        <p>
+                            By offering a streamlined search experience, we help users quickly find
+                            crucial information about security threats to aid in proactive protection.
+                        </p>
+                    </div>
+                    <div className="card second">
+                        <video className="card-video" ref={el => videoRefs.current[2] = el} autoPlay loop muted>
+                            <source src="/mainbg.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Future Plans</h3>
+                        <p>
+                            Expanding our database, improving search capabilities, and integrating
+                            additional resources to provide an even more comprehensive tool for our users.
+                        </p>
+                    </div>
                 </section>
             </div>
         </main>

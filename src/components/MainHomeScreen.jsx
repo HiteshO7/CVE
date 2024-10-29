@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import './MainHomeScreen.scss';
 
 const MainHomeScreen = () => {
-  // Use useMemo to stabilize the texts array
   const texts = useMemo(() => ["Protect", "Secure"], []);
-  const animationDuration = 200; // Duration for each letter animation
-  const totalDisplayTime = 3000; // Time for full display before switching
+  const animationDuration = 200;
+  const totalDisplayTime = 3000;
   const [index, setIndex] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isRemoving, setIsRemoving] = useState(false);
 
-  // This effect handles the animation
+  // State to track the changing number in overlay-div-first
+  const [changingNumber, setChangingNumber] = useState(5);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (isRemoving) {
@@ -33,7 +35,16 @@ const MainHomeScreen = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [index, isRemoving, currentWordIndex, texts]); // Now texts is stable
+  }, [index, isRemoving, currentWordIndex, texts]);
+
+  // Update the changing number for overlay animation
+  useEffect(() => {
+    const numberInterval = setInterval(() => {
+      setChangingNumber((prevNumber) => (prevNumber === 9 ? 1 : prevNumber + 1));
+    }, 500);
+
+    return () => clearInterval(numberInterval);
+  }, []);
 
   return (
     <div className="home-screen-container">
@@ -53,11 +64,40 @@ const MainHomeScreen = () => {
         <h1>data</h1>
       </div>
       <div className="bottom-text-right">
-        <p>Protecting your data involves using secure practices, tools, and maintaining regular vigilance to minimize risks...</p>
+        <p>Protecting your data involves using secure practices, tools, and maintaining regular vigilance to minimize risks. A strong foundation starts with using complex, unique passwords for each account and enabling two-factor authentication (2FA) to add an extra layer of security beyond passwords. Equally essential is keeping all your software, applications, and antivirus programs updated, as regular updates patch vulnerabilities that attackers could otherwise exploit.</p>
       </div>
       <div className="bottom-text-left">
-        <p>For network safety, avoid using public Wi-Fi for confidential transactions...</p>
+        <p>For network safety, avoid using public Wi-Fi for confidential transactions. If needed, add a layer of security with a Virtual Private Network (VPN). Regular backups to secure locations, such as an external drive or encrypted cloud storage, ensure data recovery in case of cyberattacks or hardware failure.</p>
       </div>
+
+      <div className="overlay-container">
+        <div className="overlay-div-first">
+          <p>
+            <span>+ </span> 6
+            {/* Animate the changing number using framer-motion */}
+            <motion.span
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 30, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="changing-number"
+            >
+              {changingNumber}
+            </motion.span>
+            k
+          </p>
+          <p className="Text">startups</p>
+          <span className="span1">←</span>
+        </div>
+        <div className="overlay-div-second">
+          The CVE Program partners with community members worldwide to grow CVE content and expand its usage. Click below to learn more about the role of CVE Numbering Authorities (CNAs) and Roots.
+        </div>
+        <div className="overlay-div-third">
+          <p><span>+</span> 240830</p>
+          <p className="ow">Data used</p>
+        </div>
+      </div>
+
       <div className="custom-shape-divider-bottom-1730133946">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
