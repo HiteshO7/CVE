@@ -13,17 +13,40 @@
 
     .header-left, .header-center, .header-right {
       display: flex;
-      gap: 15px;
       align-items: center;
+      gap: 15px;
+    }
+
+    .header-left {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .site-name {
+      display: flex;
+      font-size: 18px;
+      color: orangered;
+      background-color: rgba(60, 60, 60, 0.4);
+      padding: 9px 30px;
+      border-radius: 50px;
+
+      .logo {
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+        margin-right: 10px;
+        filter: grayscale(100%);
+      }
     }
 
     .header-center {
-      background-color: rgba(60, 60, 60, 0.2);
-      width: 25%;
+      flex: 1;
+      display: flex;
       justify-content: center;
-      border-radius: 40px;
+      background-color: rgba(60, 60, 60, 0.2);
       padding: 10px;
-
+      border-radius: 40px;
       span {
         font-size: 18px;
         padding: 8px;
@@ -35,28 +58,14 @@
       }
     }
 
-    .site-name {
+    .header-right {
+      flex: 1;
       display: flex;
-      font-size: 18px;
-      color: orangered;
-      margin-left: 150px;
-      background-color: rgba(60, 60, 60, .4);
-      padding: 9px 30px;
-      border-radius: 50px;
-
-      .logo {
-        width: 20px;
-        height: 20px;
-        margin-top: 3px;
-        margin-right: 10px;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-      }
+      justify-content: flex-end;
     }
 
     .see-more {
       background-color: white;
-      margin-right: 150px;
       color: black;
       padding: 8px 16px;
       border: none;
@@ -70,16 +79,12 @@
       }
     }
 
-    /* Extra Small Devices (phones, 0px - 575px) */
+    /* Responsive Adjustments */
     @media (max-width: 575px) {
-
-
-
       .site-name {
         font-size: 14px;
-        width: 80px;
-        margin-left: 100px;
         padding: 8px 15px;
+
         .logo {
           width: 14px;
           height: 14px;
@@ -87,33 +92,21 @@
       }
 
       .header-center {
-        display: none;
+        display: none; // Hide navigation links on smaller screens
       }
 
       .see-more {
-        margin-left: 150px;
-        width: 80px;
         font-size: 12px;
         padding: 6px;
       }
     }
 
-    /* Small Devices (large phones, 576px - 767px) */
     @media (min-width: 576px) and (max-width: 767px) {
-
-
-
       .site-name {
         font-size: 16px;
-        padding: 8px  ;
-        width: 80px;
-        margin-left: 50px;
       }
 
       .header-center {
-        margin-left: 50px;
-        width: 40%;
-        margin-right: 50px;
         span {
           font-size: 16px;
         }
@@ -121,65 +114,21 @@
 
       .see-more {
         font-size: 16px;
-        width: 100px;
-        padding: 6px;
       }
     }
 
-    /* Medium Devices (tablets, 768px - 991px) */
-    @media (min-width: 768px) and (max-width: 991px) {
-      padding: 10px 15px;
-
+    @media (min-width: 768px) {
       .site-name {
-        margin-left: 30px;
-        color: red;
+        font-size: 18px;
       }
 
       .header-center {
-        width: 35%;
         span {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
 
       .see-more {
-        margin-right: 50px;
-        font-size: 16px;
-      }
-    }
-
-    /* Large Devices (desktops, 992px - 1199px) */
-    @media (min-width: 992px) and (max-width: 1199px) {
-      padding: 10px 20px;
-
-      .site-name {
-        margin-left: 50px;
-      }
-
-      .header-center {
-        width: 35%;
-      }
-
-      .see-more {
-        margin-right: 100px;
-        font-size: 17px;
-      }
-    }
-
-    /* Extra Large Devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {
-      padding: 10px 20px;
-
-      .header-left {
-        margin-left: 0px;
-      }
-
-      .header-center {
-        width: 25%;
-      }
-
-      .see-more {
-        margin-right: 150px;
         font-size: 18px;
       }
     }

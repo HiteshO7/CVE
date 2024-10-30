@@ -11,12 +11,12 @@ const Page = () => {
     const totalWarnings = 21;
   return (
     <div>
-
-<WarningOverlay warnings={totalWarnings} />
+{/*
+<WarningOverlay warnings={totalWarnings} /> */}
     <Header />
       <MainHomeScreen />
       <CVEApp />
-      <About/> 
+      <About/>
 
     </div>
   );
