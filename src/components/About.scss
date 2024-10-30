@@ -146,7 +146,7 @@
         mask-size: 10px;
         background: #ec4e39;
         position: absolute;
-        color: black;
+        color: black !important;
     }
 
     .about-content {
@@ -322,7 +322,6 @@
     .card-div {
         position: absolute;
         width: 100%;
-
         margin-top: 1200px;
         display: flex;
         justify-content: center;
@@ -334,7 +333,7 @@
             margin-top: 1100px;
         }
         @media (max-width:700px) {
-            margin-top: 9       00px;
+            margin-top: 900px;
         }
 
         .card {

@@ -29,7 +29,7 @@ const CVECard = ({ cve }) => {
           {references.length > 0 ? (
             references.map((ref, idx) => (
               <li key={idx}>
-                <a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                <a  href={ref.url} target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">
                   {ref.source || `Reference ${idx + 1}`}
                 </a>
               </li>
