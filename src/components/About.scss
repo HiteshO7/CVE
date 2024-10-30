@@ -89,30 +89,31 @@
         .hover, .hover1 {
             width: 80%;
             color: black;
-            font-size: 50px;
+            font-size: 38px;
+            font-weight: 600;
             line-height: 45px;
             margin-top: 300px;
             margin-left: 250px;
             color: #afa18f;
             @media (max-width: 1400px){
                 margin-left: 200px;
-                font-size: 48px;
+                font-size: 36px;
                 width: 80%;
             }
             @media (max-width: 1300px){
                 margin-left: 180px;
-                font-size: 40px;
+                font-size: 32px;
                 width: 80%;
             }
             @media (max-width: 1000px){
                 margin-left: 120px;
                 margin-top: 200px;
-                font-size: 36px;
+                font-size: 30px;
                 width: 80%;
             }
             @media (max-width: 800px){
                 margin-left: 80px;
-                font-size: 30px;
+                font-size: 28px;
                 width: 80%;
             }
             @media (max-width: 700px){
