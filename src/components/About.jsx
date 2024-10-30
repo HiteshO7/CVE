@@ -23,19 +23,6 @@ const About = () => {
     const handleMouseLeave = () => setIsHovered(false);
 
     // Cursor size logic
-    const getCursorSize = () => {
-        const baseSize = 40; // Base size for larger screens
-        const width = window.innerWidth;
-
-        if (width < 600) {
-            return baseSize * 1.5; // Increase size for small screens
-        } else if (width < 900) {
-            return baseSize * 1.2; // Moderate increase for medium screens
-        } else {
-            return baseSize; // Default size for larger screens
-        }
-    };
-
     const isOverTextArea =
         textRef.current &&
         localMousePos.x >= textRef.current.getBoundingClientRect().left - mainRef.current.getBoundingClientRect().left &&
@@ -43,7 +30,7 @@ const About = () => {
         localMousePos.y >= textRef.current.getBoundingClientRect().top - mainRef.current.getBoundingClientRect().top &&
         localMousePos.y <= textRef.current.getBoundingClientRect().bottom - mainRef.current.getBoundingClientRect().top;
 
-    const size = isOverTextArea ? getCursorSize() * 5 : getCursorSize(); // Multiply by 5 for the hover state
+    const size = isOverTextArea ? 200 : 40;
 
     useEffect(() => {
         const startTimes = [2, 5, 3]; // Start times for each video in seconds
@@ -131,7 +118,7 @@ const About = () => {
                     <div className="card second">
                         <video className="card-video" ref={el => videoRefs.current[2] = el} autoPlay loop muted>
                             <source src="/mainbg.mp4" type="video/mp4" />
-                            Your browser does not support the vid   eo tag.
+                            Your browser does not support the video tag.
                         </video>
                         <h3>Future Plans</h3>
                         <p>
