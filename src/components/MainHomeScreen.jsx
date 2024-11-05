@@ -9,11 +9,34 @@ const MainHomeScreen = () => {
   const [index, setIndex] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isRemoving, setIsRemoving] = useState(false);
-
-  // State to track the changing number in overlay-div-first
   const [changingNumber, setChangingNumber] = useState(5);
+  const [videoSrc, setVideoSrc] = useState('/mainbg.mp4'); // Default video source
 
+  // Effect to update the video source based on color scheme preference
   useEffect(() => {
+    const updateVideoSource = (e) => {
+      if (e.matches) {
+        console.log('Light mode detected');
+        setVideoSrc('/white.mp4'); // Change to light mode video
+      } else {
+        console.log('Dark mode detected');
+        setVideoSrc('/mainbg.mp4'); // Change to dark mode video
+      }
+    };
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+    updateVideoSource(mediaQuery); // Set initial video based on preference
+    mediaQuery.addEventListener('change', updateVideoSource); // Listen for changes
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateVideoSource);
+    };
+  }, []);
+
+  // Effect for typing animation
+  useEffect(() => {
+    console.log('Current video source:', videoSrc); // Log current video source
+
     const timeout = setTimeout(() => {
       if (isRemoving) {
         if (index > 0) {
@@ -35,9 +58,9 @@ const MainHomeScreen = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [index, isRemoving, currentWordIndex, texts]);
+  }, [index, isRemoving, currentWordIndex, texts, videoSrc]); // Add videoSrc to dependencies
 
-  // Update the changing number for overlay animation
+  // Effect for changing number animation
   useEffect(() => {
     const numberInterval = setInterval(() => {
       setChangingNumber((prevNumber) => (prevNumber === 9 ? 1 : prevNumber + 1));
@@ -46,12 +69,15 @@ const MainHomeScreen = () => {
     return () => clearInterval(numberInterval);
   }, []);
 
+  // Log when the component renders
+  console.log('MainHomeScreen component is rendering');
+
   return (
     <div className="home-screen-container">
-      <video className="background-video" autoPlay loop muted>
-        <source src="/mainbg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+     <video className="background-video" key={videoSrc} autoPlay loop muted>
+      <source src={videoSrc} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
       <div className="text-container">
         <div className="text-left">
           <h1>{texts[currentWordIndex].slice(0, index)}</h1>
@@ -74,7 +100,6 @@ const MainHomeScreen = () => {
         <div className="overlay-div-first">
           <p>
             <span>+ </span> 6
-            {/* Animate the changing number using framer-motion */}
             <motion.span
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -90,7 +115,7 @@ const MainHomeScreen = () => {
           <span className="span1">←</span>
         </div>
         <div className="overlay-div-second">
-          The CVE Program partners with community members worldwide to grow CVE content and expand its usage. Click below to learn more about the role of CVE Numbering Authorities (CNAs) and Roots.
+          The CVE Program partners with community members worldwide to grow CVE content...
         </div>
         <div className="overlay-div-third">
           <p><span>+</span> 240830</p>

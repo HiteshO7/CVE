@@ -76,10 +76,7 @@ const CVEApp = () => {
     };
 
     return (
-        <div className="cve-app">
-            <video className="background-video" autoPlay loop muted>
-                <source src="/mainbg.mp4" type="video/mp4" />
-            </video>
+        <div className="cve-app"> 
             <div className="content">
                 <h1 className="title">CVE Search</h1>
                 <div className="search-bar">

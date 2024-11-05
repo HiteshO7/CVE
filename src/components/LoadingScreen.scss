@@ -1,18 +1,21 @@
 
+:root{
+    color-scheme: light dark;
+}
 .loader {
     align-self: center;
     justify-content: center;
 
     height: 50px;
     aspect-ratio: 2;
-    border: 10px solid #fff;
+    border: 5px solid transparent;
     box-sizing: border-box;
     background:
-      radial-gradient(farthest-side,#000 98%,#ffff) left/20px 20px,
-      radial-gradient(farthest-side,#000 98%,#ffff) left/20px 20px,
-      radial-gradient(farthest-side,#000 98%,#ffff) center/20px 20px,
-      radial-gradient(farthest-side,#000 98%,#ffff) right/20px 20px,
-      #fff;
+      radial-gradient(farthest-side,light-dark(#fff, #1E1E1E) 98%,light-dark(#1E1E1E, #fff) ) left/20px 20px,
+      radial-gradient(farthest-side,light-dark(#fff, #1E1E1E) 98%,light-dark(#1E1E1E, #fff)) left/20px 20px,
+      radial-gradient(farthest-side,light-dark(#fff, #1E1E1E) 98%,light-dark(#1E1E1E, #fff)) center/20px 20px,
+      radial-gradient(farthest-side,light-dark(#fff, #1E1E1E) 98%,light-dark(#1E1E1E, #fff)) right/20px 20px,
+      light-dark(#010101 , #fff);
     background-repeat: no-repeat;
     filter: blur(4px) contrast(10);
     animation: l14 1s infinite;

@@ -1,3 +1,6 @@
+:root{
+    color-scheme: light dark;
+}
 .home-screen-container {
     position: relative;
     display: flex;
@@ -22,6 +25,7 @@
       margin-top: 200px;
       height: 200px;
       display: flex;
+      color: light-dark(#1E1E1E , #ffffff);
 
 
     }
@@ -66,7 +70,8 @@
       justify-content: flex-end;
       padding-right: 20rem;
       margin-top: -100px;
-      color: #ec4e39;
+      color:#ec4e39;
+
       @media (max-width: 1200px){
         padding: 0px 100px ;
       }
@@ -95,17 +100,15 @@
     .text-center {
       justify-content: center;
       margin-top: -80px;
+      color:light-dark(#1E1E1E , #ffffff);
       margin-bottom: 100px;
       @media (max-width: 1200px){
-
       margin-top: -70px;
       }
       @media (max-width: 800px){
-
         margin-top: -50px;
         }
         @media (max-width: 550px){
-
             margin-top: -40px;
             }
 
@@ -247,7 +250,7 @@
     .custom-shape-divider-bottom-1730133946 {
       margin-top: -200px;
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
       left: 0;
       width: 100%;
       overflow: hidden;
@@ -261,7 +264,7 @@
         height: 185px;
       }
       .shape-fill {
-        fill: #ffffff;
+        fill: light-dark(#000 , #ffffff);
       }
     }
   }

@@ -1,7 +1,11 @@
+:root{
+    color-scheme: light dark;
+}
 .main {
-    height: 250vh;
+    height: 200vh;
     position: relative;
     overflow: hidden;
+    background-color: light-dark(#fff, #000);
 
     .mask, .body {
         width: 100%;
@@ -13,7 +17,7 @@
 
         .About-ous {
             position: absolute;
-            margin-top: 70px;
+            margin-top: 65px;
             display: flex;
             width: 100%;
             z-index: 999;
@@ -42,7 +46,7 @@
 
 
             h1 {
-                color: white;
+                color: light-dark(#000 , #fff);
                 font-size: 56px;
                 font-weight: 700;
                 @media (max-width: 1400px){
@@ -69,7 +73,7 @@
 
         .custom-shape-divider-top {
             position: absolute;
-            top: 0;
+            top: -5px;
             left: 0;
             width: 100%;
             overflow: hidden;
@@ -82,7 +86,7 @@
             }
 
             .shape-fill {
-                fill: #FFFFFF;
+                fill: light-dark(#000 , #fff);
             }
         }
 
@@ -94,7 +98,7 @@
             line-height: 45px;
             margin-top: 300px;
             margin-left: 250px;
-            color: #afa18f;
+            color: light-dark(#000 ,#afa18f );
             @media (max-width: 1400px){
                 margin-left: 200px;
                 font-size: 36px;
@@ -153,7 +157,6 @@
     .about-content {
         position: absolute;
         margin-top: 600px;
-        color: #afa18f;
 
         .hqq {
             font-weight: 700;
@@ -232,7 +235,7 @@
             font-size: 28px;
             text-align: justify;
             line-height: 35px;
-            color: #afa18f;
+            color: light-dark(rgba(20,20,20,1) , #afa18f);
             @media (max-width: 1400px){
                 margin-left: 750px;
                 font-size: 28px;
@@ -298,6 +301,7 @@
 
             li {
                 font-size: 28px;
+                color: light-dark(rgba(20,20,20,1) , #afa18f);
                 @media (max-width: 1000px){
                     font-size: 20px;
                 }
@@ -340,16 +344,18 @@
         .card {
             margin-top: 20px;
             position: relative;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: light-dark(#F8F8FF, rgba(0, 0, 0, 0.6));
             border: 1px solid rgba(236, 78, 57, .4);
+            box-shadow: 6px 6px 10px -1px rgba(0, 0 ,0,0.15),
+                 -6px -6px 10px -1px light-dark(rgba(255, 255, 255, 0.7),rgba(120, 0, 0, 0.5));
             border-radius: 8px;
             padding: 20px;
             height: 400px;
             font-size: 18px;
-            color: white;
+            color: light-dark(#101010 ,#fff);
             text-align: center;
             width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
 
             h3 {
                 color: #ec4e39;
