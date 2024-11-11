@@ -1,4 +1,5 @@
 import React from 'react';
+import './CVECard.scss';
 
 const CVECard = ({ cve }) => {
     const cvssMetrics = cve.cve.metrics?.cvssMetricV31 || [];
