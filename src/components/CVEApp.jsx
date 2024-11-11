@@ -8,8 +8,8 @@ import Image from 'next/image'; // Import Image from Next.js
 import './CVEApp.scss';
 
 const CVEApp = () => {
-    const [keyword, setKeyword] = useState('');
-    const [cves, setCves] = useState([]);
+    const [keyword, setKeyword] = useState('');  //manages the search
+    const [cves, setCves] = useState([]); // stores the list of vulnerabilites
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [page, setPage] = useState(0);
@@ -76,7 +76,7 @@ const CVEApp = () => {
     };
 
     return (
-        <div className="cve-app"> 
+        <div className="cve-app">
             <div className="content">
                 <h1 className="title">CVE Search</h1>
                 <div className="search-bar">

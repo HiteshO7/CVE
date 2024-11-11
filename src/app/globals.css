@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-
+*{
+    scrollbar-width: none;
 }
 
- 
+
 
 @font-face {
     font-family: 'NeueMontreal';

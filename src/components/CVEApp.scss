@@ -73,6 +73,12 @@
       cursor: pointer;
     }
 
+    .search-history{
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+    }
+
     .results-container {
       max-height: 70vh; // Adjust the height as needed
       overflow-y: auto;
